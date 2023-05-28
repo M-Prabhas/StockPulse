@@ -1,0 +1,44 @@
+.containerform {
+    max-width: 500px;
+    margin: 6rem auto;
+    padding: 20px;
+    border:4px black solid;
+
+  }
+  
+  .containerform h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .containerform form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .containerform input[type="text"],
+  .containerform input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .containerform input[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .containerform input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .containerform .from_name,
+  .containerform .message {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  

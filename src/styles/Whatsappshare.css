@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .whatsapp {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .whatsapp h2 {
+    margin-bottom: 10px;
+  }
+  
+  .whatsapp input[type="text"] {
+    width:8rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .whatsapp button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .whatsapp .message{
+    border:2px solid black;
+    border-radius: 5px;
+    padding:6px;
+  }
+  
+  .whatsapp button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

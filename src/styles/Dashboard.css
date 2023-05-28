@@ -1,0 +1,88 @@
+.Dashboard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(255, 207, 215);
+  }
+  
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    position:absolute;
+    top:12rem;
+  }
+  
+  .heading h1 {
+    margin-bottom: 5px;
+    color:blueviolet;
+  }
+  
+  .heading h2 {
+    margin-bottom: 10px;
+  }
+  
+  .heading input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .heading button[type="button"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+ .data{
+  position:relative;
+  border:solid black 2px;
+  padding:10px;
+  width:13rem;
+  height:12rem;
+  font-size: 0.9rem;
+ }
+
+ .data .fi-rr-rectangle-xmark{
+  position:absolute;
+  right:1rem;
+  cursor:pointer;
+ }
+
+ .data .fi-brands-whatsapp,.fi-br-envelope{
+     margin-right: 1rem;
+     cursor:pointer;
+ }
+  
+ 
+  
+  .datasection {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoutsection {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .child1 {
+    padding: 5px;
+  }
+  
+  /* Icon Fonts */
+ 
+  
