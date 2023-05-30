@@ -1,7 +1,10 @@
 const express = require("express");
-const wbm = require("wbm");
+require('dotenv').config()
 const  nodemailer = require('nodemailer');
 const app=express();
+const accountSid = process.env.ACCOUNTSID;
+const authToken = process.env.AUTHTOKEN;
+const client = require('twilio')(accountSid, authToken);
 
 
 app.use(express.json());
@@ -21,14 +24,16 @@ const transporter = nodemailer.createTransport({
 
 
 app.post("/whatsappshare",function(req,res){
-        console.log(req.body.number,req.body.message);
-    wbm.start().then(async () => {
-        const phones = [req.body.number];
-        const message = req.body.message;
-        await wbm.send(phones, message);
-        await wbm.end();
-    }).catch(err => console.log(err));
-});
+        console.log(req.body.num,req.body.msg,req.body.mynum);
+        client.messages
+            .create({
+                body:req.body.msg,
+                from: 'whatsapp:+14155238886',
+                to: 'whatsapp:+918341407675' 
+            })
+            .then(message => console.log(message.sid))
+            .done();
+    });
 
 
 app.post('/Emailshare',function(req,res){

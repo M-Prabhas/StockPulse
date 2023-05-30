@@ -9,8 +9,9 @@
   "author": "prabhas",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "nodemailer": "^6.9.2",
-    "wbm": "^1.1.16"
+    "twilio": "^4.11.1"
   }
 }
