@@ -10,17 +10,18 @@ const Whatsappshare = () => {
      const { closingPrice } = useContext(StockContext);
      let msg=`the stock Price on 15 th of May is ${closingPrice}`;
      const [mynum,setmynum]=useState("");
-     const sendmessage = async () => {
-      try {
-        await axios.post('/whatsappshare', {
-          msg,
-          num,
-          mynum
-        });
-        console.log('Message sent successfully!');
-      } catch (error) {
-        console.error('Error sending message:', error);
-      }
+     const sendmessage = (e) => {
+      e.preventDefault();
+      let number = num.replace(/[^\w\s]/gi, "").replace(/ /g, "");
+
+    // Appending the phone number to the URL
+      let url = `https://web.whatsapp.com/send?phone=${number}`;
+
+    // Appending the message to the URL by encoding it
+      url += `&text=${encodeURI(msg)}&app_absent=0`;
+
+    // Open our newly created URL in a new tab to send the message
+      window.open(url)
 
       };
      
